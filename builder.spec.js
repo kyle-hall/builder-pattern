@@ -1,8 +1,23 @@
 
-const builder = require('./builder')
+const characterBuilder = require('./builder')
 
-test('builder should return a new object with a name', () => {
+describe('characterBuilder', () => {
+  test('should return a new object with a name', () => {
   const expected = "Kyle"
-  const actual = builder.build().name
+
+  console.log(`the builder: ${characterBuilder()}`)
+
+  const actual = characterBuilder()
+    .withName(expected)
+    .build().name
   expect(actual).toEqual(expected)
+})
+
+  test('should return a new object with a different name', () => {
+    const expected = "Arthur"
+    const actual = characterBuilder()
+      .withName(expected)
+      .build().name
+    expect(actual).toEqual(expected)
+  })
 })

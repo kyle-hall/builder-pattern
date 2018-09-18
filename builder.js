@@ -1,10 +1,14 @@
 
-const builder = {
-  build: () => {
-    return {
-      name: "Kyle"
-    }
+const characterBuilder = () => {
+  const _character = {}
+
+  return {
+    withName: name => {
+      _character.name = name
+      return 
+    },
+    build: () => _character
   }
 }
 
-module.exports = builder
+module.exports = characterBuilder
