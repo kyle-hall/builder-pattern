@@ -1,0 +1,13 @@
+{
+  "name": "builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage",
+    "test-watch": "yarn test --watch"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
